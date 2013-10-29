@@ -1,0 +1,10 @@
+from distutils.core import setup
+import sys, os, py2exe
+from optparse import OptionParser
+
+sys.path.append(os.getcwd())
+parser = OptionParser()
+opts, args = parser.parse_args()
+sys.argv = [sys.argv[0], 'py2exe']
+print sys.argv
+setup(console=args)
